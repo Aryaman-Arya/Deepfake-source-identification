@@ -17,17 +17,16 @@ In order to filter the tweets containing deepfakes, we use deep learning based d
 to filter out the deepfakes from the tweets that have already been screened. The list of all the tweets with the deepfakes is then used for further processing.
 
 #### Twitter API
-We have used the python library Tweepy to access the twitter API, which is used ti make requests to twitter platform.The API has a
+We have used the python library Tweepy to access the twitter API, which is used to make requests to twitter platform.The API has a
 limit of 50 requests per 15 minutes when using the search
 functionality and the relevant tweets are extracted based on
 the provided query. 
 
 #### Image Similarity
-In order to compute the image similarity between the input image and the extracted deepfake image, LightCNN model is used for feature extraction. Before extracting the features, facial regions are cropped out of the image. For this we have used the MTCNN model.
+In order to compute the image similarity between the input image and the extracted deepfake image, LightCNN model is used for feature extraction. Before extracting the features, facial regions are cropped out of the image. For this we have used the MTCNN model. 
 
 #### Deepfake Detection
-In order to detect deepfake, we have used the XceptionNet deep learning network. This model is trained on Forensics++ dataset which is a large scale deepfake dataset.The dataset has consists of 4 manipulation techniques - Deepfakes, Face2Face, Face swap and Neural textures. 
-
+In order to detect deepfake, we have used the XceptionNet deep learning network. This model is trained on Forensics++ dataset which is a large scale deepfake dataset.The dataset has consists of 4 manipulation techniques - Deepfakes, Face2Face, Face swap and Neural textures. Xception, which means for "extreme inception," pushes the fundamental ideas of Inception to the limit. In Inception, the initial input was compressed using 1x1 convolutions, and from each of those input spaces, we utilised various types of filters on each depth space. Just the opposite occurs with Xception. Instead, it applies the filters to each depth map individually before using 1X1 convolution to compress the input space all at once.
 
 ## Authors
 
